@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="22-paid-account-(payments)-sign-up.Paid account (Payments) sign up" skipped="6" tests="6" time="0.0"><testcase classname="22-paid-account-(payments)-sign-up.Paid account (Payments) sign up" name="Payments: Pro user signup Company account inside EU -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1185 @HUB-763 @HUB-768 @HUB-774 @assigneecaroline.palmer @assigneeshyukri.shyukriev @WIP @SIGNUP_PRO
+  Scenario Outline: Payments: Pro user signup Company account inside EU -- @1.1 
+    Given the user has chosen a 'paid' account ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    When the user signs up with name UK_user and surname Pro_VAT ... skipped in 0.000s
+    And the user selects the country United Kingdom ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Secure payment ... skipped in 0.000s
+    When I enter 4242424242424242 in card number field ... skipped in 0.000s
+    And I select month 01 and year 2020 in expiration fields ... skipped in 0.000s
+    And I set 123 in security code field ... skipped in 0.000s
+    When I set country United Kingdom for company ... skipped in 0.000s
+    When I enable This is for business use checkbox ... skipped in 0.000s
+    And I set UK_company in company name field ... skipped in 0.000s
+    And I set GB339072747 in vat number field ... skipped in 0.000s
+    And I set UK_str 11 in street address field ... skipped in 0.000s
+    And I set W1 in postal code field ... skipped in 0.000s
+    And I set London in city field ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Review your order ... skipped in 0.000s
+    Then the Card with value Visa credit card ending in 4242 is present in credit card ... skipped in 0.000s
+    And the Street address with value UK_str 11 is present in billing details ... skipped in 0.000s
+    And the Zip or Postal code with value W1 is present in billing details ... skipped in 0.000s
+    And the City with value London is present in billing details ... skipped in 0.000s
+    And the Country with value GB is present in billing details ... skipped in 0.000s
+    And the VAT with value 20% VAT included is present in order summary ... skipped in 0.000s
+    And the order summary with value Total per month £ 60.00 is present in order summary ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Your payment is successful ... skipped in 0.000s
+    When click in link with text Get Started ... skipped in 0.000s
+    When the user logins using the email from global GENERATED_EMAIL_ALIAS and the password layar123 ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="22-paid-account-(payments)-sign-up.Paid account (Payments) sign up" name="Payments: Pro user signup Company account inside EU -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1185 @HUB-763 @HUB-768 @HUB-774 @assigneecaroline.palmer @assigneeshyukri.shyukriev @WIP @SIGNUP_PRO
+  Scenario Outline: Payments: Pro user signup Company account inside EU -- @1.2 
+    Given the user has chosen a 'paid' account ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    When the user signs up with name NL_user and surname Pro_VAT ... skipped in 0.000s
+    And the user selects the country Netherlands ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Secure payment ... skipped in 0.000s
+    When I enter 4242424242424242 in card number field ... skipped in 0.000s
+    And I select month 01 and year 2020 in expiration fields ... skipped in 0.000s
+    And I set 123 in security code field ... skipped in 0.000s
+    When I set country Netherlands for company ... skipped in 0.000s
+    When I enable This is for business use checkbox ... skipped in 0.000s
+    And I set NL_company in company name field ... skipped in 0.000s
+    And I set NL010000446B01 in vat number field ... skipped in 0.000s
+    And I set NL_str 55 in street address field ... skipped in 0.000s
+    And I set 1012PS in postal code field ... skipped in 0.000s
+    And I set Amsterdam in city field ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Review your order ... skipped in 0.000s
+    Then the Card with value Visa credit card ending in 4242 is present in credit card ... skipped in 0.000s
+    And the Street address with value NL_str 55 is present in billing details ... skipped in 0.000s
+    And the Zip or Postal code with value 1012PS is present in billing details ... skipped in 0.000s
+    And the City with value Amsterdam is present in billing details ... skipped in 0.000s
+    And the Country with value NL is present in billing details ... skipped in 0.000s
+    And the VAT with value 21% VAT included is present in order summary ... skipped in 0.000s
+    And the order summary with value Total per month € 60.50 is present in order summary ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Your payment is successful ... skipped in 0.000s
+    When click in link with text Get Started ... skipped in 0.000s
+    When the user logins using the email from global GENERATED_EMAIL_ALIAS and the password layar123 ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="22-paid-account-(payments)-sign-up.Paid account (Payments) sign up" name="Payments: Pro user signup Company account inside EU -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1185 @HUB-763 @HUB-768 @HUB-774 @assigneecaroline.palmer @assigneeshyukri.shyukriev @WIP @SIGNUP_PRO
+  Scenario Outline: Payments: Pro user signup Company account inside EU -- @1.3 
+    Given the user has chosen a 'paid' account ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    When the user signs up with name BG_user and surname Pro_VAT ... skipped in 0.000s
+    And the user selects the country Bulgaria ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Secure payment ... skipped in 0.000s
+    When I enter 5555555555554444 in card number field ... skipped in 0.000s
+    And I select month 01 and year 2020 in expiration fields ... skipped in 0.000s
+    And I set 123 in security code field ... skipped in 0.000s
+    When I set country Bulgaria for company ... skipped in 0.000s
+    When I enable This is for business use checkbox ... skipped in 0.000s
+    And I set BG_company in company name field ... skipped in 0.000s
+    And I set BG121745404 in vat number field ... skipped in 0.000s
+    And I set Trakia 35 in street address field ... skipped in 0.000s
+    And I set 1305 in postal code field ... skipped in 0.000s
+    And I set Sofia in city field ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Review your order ... skipped in 0.000s
+    Then the Card with value MasterCard credit card ending in 4444 is present in credit card ... skipped in 0.000s
+    And the Street address with value Trakia 35 is present in billing details ... skipped in 0.000s
+    And the Zip or Postal code with value 1305 is present in billing details ... skipped in 0.000s
+    And the City with value Sofia is present in billing details ... skipped in 0.000s
+    And the Country with value BG is present in billing details ... skipped in 0.000s
+    And the VAT with value 20% VAT included is present in order summary ... skipped in 0.000s
+    And the order summary with value Total per month € 60.00 is present in order summary ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Your payment is successful ... skipped in 0.000s
+    When click in link with text Get Started ... skipped in 0.000s
+    When the user logins using the email from global GENERATED_EMAIL_ALIAS and the password layar123 ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="22-paid-account-(payments)-sign-up.Paid account (Payments) sign up" name="Payments: Pro user signup Company account OUTSIDE EU" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-763 @HUB-774 @assignee:caroline.palmer @assignee:shyukri.shyukriev @WIP @SIGNUP_PRO
+  Scenario: Payments: Pro user signup Company account OUTSIDE EU
+    Given the user has chosen a 'paid' account ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    When the user signs up with name Pro_User and surname Signup_USA ... skipped in 0.000s
+    And the user selects the country United States of America ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Secure payment ... skipped in 0.000s
+    When I enter 4242424242424242 in card number field ... skipped in 0.000s
+    And I select month 01 and year 2020 in expiration fields ... skipped in 0.000s
+    And I set 123 in security code field ... skipped in 0.000s
+    When I enable This is for business use checkbox ... skipped in 0.000s
+    And I set test_company_USA in company name field ... skipped in 0.000s
+    And I set test_address in street address field ... skipped in 0.000s
+    And I set 10007 in postal code field ... skipped in 0.000s
+    And I set New York in city field ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Review your order ... skipped in 0.000s
+    Then the Card with value Visa credit card ending in 4242 is present in credit card ... skipped in 0.000s
+    And the Street address  with value test_address is present in billing details ... skipped in 0.000s
+    And the Zip or Postal code with value 10007 is present in billing details ... skipped in 0.000s
+    And the City with value New York is present in billing details ... skipped in 0.000s
+    And the Country with value US is present in billing details ... skipped in 0.000s
+    And the order summary with value Total per month US$ 50.00 is present in order summary ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Your payment is successful ... skipped in 0.000s
+    When click in link with text Get Started ... skipped in 0.000s
+    When the user logins using the email from global GENERATED_EMAIL_ALIAS and the password layar123 ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="22-paid-account-(payments)-sign-up.Paid account (Payments) sign up" name="Payment details should be pre-populated when clicking on change links on review page" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-884 @assignee:shyukri.shyukriev @COMPLETED
+  Scenario: Payment details should be pre-populated when clicking on change links on review page
+    Given the user has chosen a 'paid' account ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    When the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    And the user signs up with name Pro_User and surname Signup ... skipped in 0.000s
+    And the user selects the country Netherlands ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Secure payment ... skipped in 0.000s
+    When I enter 4242424242424242 in card number field ... skipped in 0.000s
+    And I select month 01 and year 2020 in expiration fields ... skipped in 0.000s
+    And I set 123 in security code field ... skipped in 0.000s
+    When I set country Bulgaria for company ... skipped in 0.000s
+    When I enable This is for business use checkbox ... skipped in 0.000s
+    And I set test_company in company name field ... skipped in 0.000s
+    And I set BG121745404 in vat number field ... skipped in 0.000s
+    And I set test_address in street address field ... skipped in 0.000s
+    And I set 1000 in postal code field ... skipped in 0.000s
+    And I set Sofia in city field ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Review your order ... skipped in 0.000s
+    Then the Card with value Visa credit card ending in 4242 is present in credit card ... skipped in 0.000s
+    When click in link with text Change ... skipped in 0.000s
+    Then the page title must be Secure payment ... skipped in 0.000s
+    Then card number field contains 4242424242424242 ... skipped in 0.000s
+    And security code field contains 123 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="22-paid-account-(payments)-sign-up.Paid account (Payments) sign up" name="Card declined" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-767 @OPEN
+  Scenario: Card declined
+    Given the user has chosen a 'paid' account ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    When the user signs up with name Pro_User and surname Signup ... skipped in 0.000s
+    And the user selects the country Netherlands ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Secure payment ... skipped in 0.000s
+    When I enter 4000000000000002 in card number field ... skipped in 0.000s
+    And I select month 01 and year 2020 in expiration fields ... skipped in 0.000s
+    And I set 123 in security code field ... skipped in 0.000s
+    When I set country Bulgaria for company ... skipped in 0.000s
+    And I set test_address in street address field ... skipped in 0.000s
+    And I set 1000 in postal code field ... skipped in 0.000s
+    And I set Sofia in city field ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Review your order ... skipped in 0.000s
+    Then the Card with value Visa credit card ending in 0002 is present in credit card ... skipped in 0.000s
+    When I proceed ... skipped in 0.000s
+    Then the page title must be Review your order ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

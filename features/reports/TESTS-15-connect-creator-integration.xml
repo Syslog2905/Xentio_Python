@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="15-connect-creator-integration.Connect Creator integration" skipped="16" tests="16" time="0.0"><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Create a connect blipp in a new campaign setting it for approval" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-359 @CC-398 @CC-427 @assignee:ben.dalby @assignee:maurice @assignee:nikola_layar @OPEN @AUTOMATABLE
+  Scenario: Create a connect blipp in a new campaign setting it for approval
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And set the blipp for approval ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is be added to the Project ... skipped in 0.000s
+    And check that in the card menu of blipp cc_blipp the options are move,delete ... skipped in 0.000s
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to approvals ... skipped in 0.000s
+    When I select the blipp with the name cc_blipp and approve it ... skipped in 0.000s
+    Then the blipp with the name cc_blipp is approved ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Create a connect blipp in a new campaign publishing it" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-359 @CC-390 @CC-427 @assignee:ben.dalby @assignee:maurice @assignee:nikola_layar @OPEN @AUTOMATABLE
+  Scenario: Create a connect blipp in a new campaign publishing it
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I publish the blipp ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is added to the Project ... skipped in 0.000s
+    And check that in the card menu of blipp cc_blipp the options are publish,unpublish,move,delete ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Create a connect blipp in a new campaign without approving or publishing it" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-359 @CC-385 @CC-427 @assignee:ben.dalby @assignee:maurice @OPEN @AUTOMATABLE
+  Scenario: Create a connect blipp in a new campaign without approving or publishing it
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is added to the Project ... skipped in 0.000s
+    When I click in the blipp with name cc_blipp ... skipped in 0.000s
+    Then the CC editor is opened ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Create a connect blipp in an existing campaign with other blipps, setting it for approval" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-390 @CC-427 @assignee:ben.dalby @assignee:nikola_layar @COMPLETED @AUTOMATABLE
+  Scenario: Create a connect blipp in an existing campaign with other blipps, setting it for approval
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I create a BB blipp with the name BEHAVE_BB_CC_TEST using marker.png marker image ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BUILDER_BLIPP is created ... skipped in 0.000s
+    When I create a bespoke blipp with the name BEHAVE_BSPK_CC_TEST using blipp.zip file ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BESPOKE_BLIPP_GLOBAL is created ... skipped in 0.000s
+    When I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And set the blipp for approval ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is be added to the Project ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Create a connect blipp in an existing campaign with other blipps, publishing it" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-390 @CC-427 @assignee:ben.dalby @assignee:nikola_layar @COMPLETED @AUTOMATABLE
+  Scenario: Create a connect blipp in an existing campaign with other blipps, publishing it
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I create a BB blipp with the name BEHAVE_BB_CC_TEST using marker.png marker image ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BUILDER_BLIPP is created ... skipped in 0.000s
+    When I create a bespoke blipp with the name BEHAVE_BSPK_CC_TEST using blipp.zip file ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BESPOKE_BLIPP_GLOBAL is created ... skipped in 0.000s
+    When I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I publish the blipp ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is be added to the Project ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Create a connect blipp in an existing campaign with other blipps, without approving or publishing it" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-390 @CC-427 @assignee:ben.dalby @assignee:nikola_layar @COMPLETED @AUTOMATABLE
+  Scenario: Create a connect blipp in an existing campaign with other blipps, without approving or publishing it
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I create a BB blipp with the name BEHAVE_BB_CC_TEST using marker.png marker image ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BUILDER_BLIPP is created ... skipped in 0.000s
+    When I create a bespoke blipp with the name BEHAVE_BSPK_CC_TEST using blipp.zip file ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BESPOKE_BLIPP_GLOBAL is created ... skipped in 0.000s
+    When I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is be added to the Project ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Add existing CC blipp to new campaign" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @AUTOMATABLE
+  Scenario: Add existing CC blipp to new campaign
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When I search for an existing blipp called cc_blipp and I add it ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is be added to the Project ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Add existing CC blipp to a campaign with other blipps" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @AUTOMATABLE
+  Scenario: Add existing CC blipp to a campaign with other blipps
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I create a BB blipp with the name BEHAVE_BB_CC_TEST using marker.png marker image ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BUILDER_BLIPP is created ... skipped in 0.000s
+    When I create a bespoke blipp with the name BEHAVE_BSPK_CC_TEST using blipp.zip file ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BESPOKE_BLIPP_GLOBAL is created ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When I search for an existing blipp called cc_blipp and I add it ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is be added to the Project ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Publish and unpublish a CC blipp from campaigns without approval" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-394 @assignee:ben.dalby @COMPLETED @AUTOMATABLE
+  Scenario: Publish and unpublish a CC blipp from campaigns without approval
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is added to the Project ... skipped in 0.000s
+    When click in publish from the card menu of blipp cc_blipp ... skipped in 0.000s
+    Then the blipp cc_blipp is published ... skipped in 0.000s
+    When click in unpublish from the card menu of blipp cc_blipp ... skipped in 0.000s
+    Then the blipp cc_blipp is not published ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Delete a CC blipp from campaigns" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-396 @assignee:ben.dalby @COMPLETED @AUTOMATABLE
+  Scenario: Delete a CC blipp from campaigns
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is added to the Project ... skipped in 0.000s
+    When click in delete from the card menu of blipp cc_blipp ... skipped in 0.000s
+    And the blipp with the name cc_blipp is not in the campaign ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Blipp a CC blipp published using approval flow" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @MANUAL_FROM_APP
+  Scenario: Blipp a CC blipp published using approval flow
+    Given a blipp created as a normal user ... skipped in 0.000s
+    When I approve the blipp as a blippar admin user and publish it ... skipped in 0.000s
+    And I blipp the blipp from the app ... skipped in 0.000s
+    Then the blipp can be blipped ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Blipp a CC blipp published from CC" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @MANUAL_FROM_APP
+  Scenario: Blipp a CC blipp published from CC
+    Given a blipp created as a blippar admin user ... skipped in 0.000s
+    And I publish the blipp in CC ... skipped in 0.000s
+    And I blipp the blipp from the app ... skipped in 0.000s
+    Then the blipp can be blipped ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Blipp a CC blipp published from campaign screen" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @MANUAL_FROM_APP
+  Scenario: Blipp a CC blipp published from campaign screen
+    Given a blipp created as a blippar admin user but not published ... skipped in 0.000s
+    When I go to campaign pages ... skipped in 0.000s
+    And I open the menu in the blipp card ... skipped in 0.000s
+    When I select publish ... skipped in 0.000s
+    And I blipp the blipp from the app ... skipped in 0.000s
+    Then the blipp can be blipped ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Publish and unpublish a CC blipp from campaigns with approval flow" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-395 @CC-398 @CC-399 @assignee:ben.dalby @assignee:nikola_layar @COMPLETED @AUTOMATABLE
+  Scenario: Publish and unpublish a CC blipp from campaigns with approval flow
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is added to the Project ... skipped in 0.000s
+    When click in publish from the card menu of blipp cc_blipp ... skipped in 0.000s
+    Then the status of blipp cc_blipp must be pending_approval ... skipped in 0.000s
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to approvals ... skipped in 0.000s
+    Then the blipp with name cc_blipp is added to approvals ... skipped in 0.000s
+    When I click in approve button in the blipp with the name cc_blipp ... skipped in 0.000s
+    Then the blipp cc_blipp is published ... skipped in 0.000s
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When click in unpublish from the card menu of blipp cc_blipp ... skipped in 0.000s
+    Then the blipp cc_blipp is not published ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Move CC blipp to another campaign" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-397 @assignee:nikola_layar @COMPLETED @AUTOMATABLE
+  Scenario: Move CC blipp to another campaign
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign2 ... skipped in 0.000s
+    And I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is added to the Project ... skipped in 0.000s
+    When I click in move option in the card menu of blipp cc_blipp ... skipped in 0.000s
+    And I select the campaign BEHAVE_CC_campaign2 ... skipped in 0.000s
+    Then the blipp is not present in campaign BEHAVE_CC_campaign ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I open the campaign BEHAVE_CC_campaign2 ... skipped in 0.000s
+    Then the blipp is present in campaign BEHAVE_CC_campaign2 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="15-connect-creator-integration.Connect Creator integration" name="Reject CC blipp" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @CC-400 @assignee:ben.dalby @COMPLETED @AUTOMATABLE
+  Scenario: Reject CC blipp
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to My Campaigns ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    When I create the campaign BEHAVE_CC_campaign and open it ... skipped in 0.000s
+    And I click on the create connect blipp option ... skipped in 0.000s
+    Then the Connect Creator is opened ... skipped in 0.000s
+    When the user creates a new connect blipp with name cc_blipp within the Connect Creator ... skipped in 0.000s
+    And I go back to hub campaigns page ... skipped in 0.000s
+    Then the screen My campaigns is opened ... skipped in 0.000s
+    And the blipp with name cc_blipp is added to the Project ... skipped in 0.000s
+    When click in publish from the card menu of blipp cc_blipp ... skipped in 0.000s
+    Then the status of blipp cc_blipp must be pending_approval ... skipped in 0.000s
+    When I login with user <user> and password <password> ... skipped in 0.000s
+    And I go to approvals ... skipped in 0.000s
+    Then the blipp with name cc_blipp is added to approvals ... skipped in 0.000s
+    When I click in reject button in the blipp with the name cc_blipp ... skipped in 0.000s
+    Then the blipp cc_blipp is not published ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="24-accounts-api.Accounts API" skipped="11" tests="11" time="0.0"><testcase classname="24-accounts-api.Accounts API" name="check_permissions endpoint" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1071 @assignee:juanmoschino @COMPLETED @ACCOUNTS_API
+  Scenario: check_permissions endpoint
+    When I set payload {"permissions": ["publish_blipp_live", "developer_app_login", "app_debugging"]} ... skipped in 0.000s
+    And I set aditional header {'Content-Type':'application/json'} ... skipped in 0.000s
+    And As blippar_admin I run a POST in the endpoint /api/v1/user/check_permissions with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "publish_blipp_live":true ... skipped in 0.000s
+    And the response contains the value "developer_app_login":false ... skipped in 0.000s
+    And the response contains the value "app_debugging":true ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/group endpoint -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1179 @assigneecaroline.palmer @versionnext-version @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/group endpoint -- @1.1 
+    When As blippar_admin I run a GET in the endpoint /api/v1/user/group with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "id":7 ... skipped in 0.000s
+    And the response contains the value "country":"GB" ... skipped in 0.000s
+    And the response contains the value "name":"Blippar" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/group endpoint -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1179 @assigneecaroline.palmer @versionnext-version @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/group endpoint -- @1.2 
+    When As normal_user I run a GET in the endpoint /api/v1/user/group with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "id":2059 ... skipped in 0.000s
+    And the response contains the value "country":"GB" ... skipped in 0.000s
+    And the response contains the value "name":"automated.group" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/group endpoint -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1179 @assigneecaroline.palmer @versionnext-version @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/group endpoint -- @1.3 
+    When As group_admin I run a GET in the endpoint /api/v1/user/group with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "id":2059 ... skipped in 0.000s
+    And the response contains the value "country":"GB" ... skipped in 0.000s
+    And the response contains the value "name":"automated.group" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/group endpoint -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1179 @assigneecaroline.palmer @versionnext-version @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/group endpoint -- @1.4 
+    When As basic_user I run a GET in the endpoint /api/v1/user/group with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "id":5278 ... skipped in 0.000s
+    And the response contains the value "country":"DE" ... skipped in 0.000s
+    And the response contains the value "name":"UserGroup:juan.moschino+basic_user@blippar.com" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/roles endpoint -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1186 @assigneecaroline.palmer @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/roles endpoint -- @1.1 
+    When As blippar_admin I run a GET in the endpoint /api/v1/user/roles with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value {"roles":[{"key":"blippar_admin"},{"key":"ad_user"},{"key":"blippbuilder_flash_user"},{"key":"blippbuilder_javascript_user"},{"key":"bespoke_javascript_user"}]} ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/roles endpoint -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1186 @assigneecaroline.palmer @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/roles endpoint -- @1.2 
+    When As normal_user I run a GET in the endpoint /api/v1/user/roles with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "key":"normal_user" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/roles endpoint -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1186 @assigneecaroline.palmer @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/roles endpoint -- @1.3 
+    When As group_admin I run a GET in the endpoint /api/v1/user/roles with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "key":"group_admin" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="Get user/roles endpoint -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1186 @assigneecaroline.palmer @WIP @ACCOUNTS_API
+  Scenario Outline: Get user/roles endpoint -- @1.4 
+    When As basic_user I run a GET in the endpoint /api/v1/user/roles with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value "key":"signup_user" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="BDN membership endpoint check -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1198 @assigneecaroline.palmer @WIP @ACCOUNTS_API
+  Scenario Outline: BDN membership endpoint check -- @1.1 
+    When I set payload {"member": 'true'} ... skipped in 0.000s
+    And I set aditional header {'Content-Type':'application/json'} ... skipped in 0.000s
+    And As bdn_membership_check_user I run a POST in the endpoint /api/v1/user/bdn with base in var accounts_url ... skipped in 0.000s
+    And As bdn_membership_check_user I run a GET in the endpoint /api/v1/user/bdn with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value {"member":true} ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="24-accounts-api.Accounts API" name="BDN membership endpoint check -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1198 @assigneecaroline.palmer @WIP @ACCOUNTS_API
+  Scenario Outline: BDN membership endpoint check -- @1.2 
+    When I set payload {"member": 'false'} ... skipped in 0.000s
+    And I set aditional header {'Content-Type':'application/json'} ... skipped in 0.000s
+    And As bdn_membership_check_user I run a POST in the endpoint /api/v1/user/bdn with base in var accounts_url ... skipped in 0.000s
+    And As bdn_membership_check_user I run a GET in the endpoint /api/v1/user/bdn with base in var accounts_url ... skipped in 0.000s
+    Then the response contains the value {"member":false} ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="18-transcoder-service.Transcoder service" skipped="4" tests="4" time="0.0"><testcase classname="18-transcoder-service.Transcoder service" name="Create job and poll using all roles -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-576 @HUB-577 @assigneeben.dalby @COMPLETED @TRANSCODER
+  Scenario Outline: Create job and poll using all roles -- @1.1 
+    When as a blippar_user I upload the video video.mp4, type video/mp4 to the transcoder service (API) ... skipped in 0.000s
+    And as a blippar_user I poll for the last started job until it is completed (API) ... skipped in 0.000s
+    Then the status of the transcoder job is completed (API) ... skipped in 0.000s
+    Then the output with key video.mp4 is present (API) ... skipped in 0.000s
+    And the output with key hls_0400k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_0600k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1000k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1500k/video is present (API) ... skipped in 0.000s
+    And the playlist with name video is present (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="18-transcoder-service.Transcoder service" name="Create job and poll using all roles -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-576 @HUB-577 @assigneeben.dalby @COMPLETED @TRANSCODER
+  Scenario Outline: Create job and poll using all roles -- @1.2 
+    When as a normal_user I upload the video video.mp4, type video/mp4 to the transcoder service (API) ... skipped in 0.000s
+    And as a normal_user I poll for the last started job until it is completed (API) ... skipped in 0.000s
+    Then the status of the transcoder job is completed (API) ... skipped in 0.000s
+    Then the output with key video.mp4 is present (API) ... skipped in 0.000s
+    And the output with key hls_0400k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_0600k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1000k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1500k/video is present (API) ... skipped in 0.000s
+    And the playlist with name video is present (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="18-transcoder-service.Transcoder service" name="Create job and poll using all roles -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-576 @HUB-577 @assigneeben.dalby @COMPLETED @TRANSCODER
+  Scenario Outline: Create job and poll using all roles -- @1.3 
+    When as a group_admin I upload the video video.mp4, type video/mp4 to the transcoder service (API) ... skipped in 0.000s
+    And as a group_admin I poll for the last started job until it is completed (API) ... skipped in 0.000s
+    Then the status of the transcoder job is completed (API) ... skipped in 0.000s
+    Then the output with key video.mp4 is present (API) ... skipped in 0.000s
+    And the output with key hls_0400k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_0600k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1000k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1500k/video is present (API) ... skipped in 0.000s
+    And the playlist with name video is present (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="18-transcoder-service.Transcoder service" name="Create job and poll using all roles -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-576 @HUB-577 @assigneeben.dalby @COMPLETED @TRANSCODER
+  Scenario Outline: Create job and poll using all roles -- @1.4 
+    When as a blippar_admin I upload the video video.mp4, type video/mp4 to the transcoder service (API) ... skipped in 0.000s
+    And as a blippar_admin I poll for the last started job until it is completed (API) ... skipped in 0.000s
+    Then the status of the transcoder job is completed (API) ... skipped in 0.000s
+    Then the output with key video.mp4 is present (API) ... skipped in 0.000s
+    And the output with key hls_0400k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_0600k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1000k/video is present (API) ... skipped in 0.000s
+    And the output with key hls_1500k/video is present (API) ... skipped in 0.000s
+    And the playlist with name video is present (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

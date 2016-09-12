@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="2-hub-login-tests.Hub login tests" skipped="7" tests="7" time="0.0"><testcase classname="2-hub-login-tests.Hub login tests" name="Login as blippar admin and verify side menu visualization" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @LOGIN
+  Scenario: Login as blippar admin and verify side menu visualization
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+    Then the options in the side menu are My Campaigns,Group Campaigns,All Campaigns,Groups & Users,Approvals,Manage Advertisements,App ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="2-hub-login-tests.Hub login tests" name="Login as blippar user and verify side menu visualization" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @LOGIN
+  Scenario: Login as blippar user and verify side menu visualization
+    When I login with user auto.blippar+blippar_user1@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar User is logged in ... skipped in 0.000s
+    Then the options in the side menu are My Campaigns,Group Campaigns,All Campaigns,Groups & Users,Approvals ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="2-hub-login-tests.Hub login tests" name="Login as group admin and verify side menu visualization" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @LOGIN
+  Scenario: Login as group admin and verify side menu visualization
+    When I login with user auto.blippar+group_admin@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar GroupAdmin is logged in ... skipped in 0.000s
+    Then the options in the side menu are My Campaigns,Group Campaigns,Manage users ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="2-hub-login-tests.Hub login tests" name="Login as normal user and verify side menu visualization" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @LOGIN
+  Scenario: Login as normal user and verify side menu visualization
+    When I login with user auto.blippar+group_user@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Hub GroupUser is logged in ... skipped in 0.000s
+    Then the options in the side menu are My Campaigns ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    Then I check all campaigns under My Campaigns are created by Hub GroupUser ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="2-hub-login-tests.Hub login tests" name="Login as blippar Super admin and verify side menu visualization" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @LOGIN @PRODUCTION_EXCLUDED
+  Scenario: Login as blippar Super admin and verify side menu visualization
+    When I login with user auto.blippar+superadmin@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar Super_Admin is logged in ... skipped in 0.000s
+    Then the options in the side menu are My Campaigns,Group Campaigns,All Campaigns,Groups & Users,Approvals,Manage Advertisements,Permissions,Tools,Connect,App ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="2-hub-login-tests.Hub login tests" name="Login with valid credentials and logout" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-665 @assignee:ben.dalby @COMPLETED @LOGIN
+  Scenario: Login with valid credentials and logout
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar Admin is logged in ... skipped in 0.000s
+    When the logout option is selected in user dropdown menu ... skipped in 0.000s
+    Then Log out screen is opened ... skipped in 0.000s
+    When the user clicks in LOGOUT button ... skipped in 0.000s
+    Then Log in to your Blippar account screen is opened ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="2-hub-login-tests.Hub login tests" name="Cancel logout" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-665 @assignee:ben.dalby @COMPLETED @LOGIN
+  Scenario: Cancel logout
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar Admin is logged in ... skipped in 0.000s
+    When the logout option is selected in user dropdown menu ... skipped in 0.000s
+    Then the logout confirmation message is opened ... skipped in 0.000s
+    When the user clicks in STAY LOGGED IN button ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

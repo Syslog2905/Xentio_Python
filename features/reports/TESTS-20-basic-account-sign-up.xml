@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="20-basic-account-sign-up.Basic account sign up" skipped="18" tests="18" time="0.0"><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up with a Basic (free) account - verification email &amp; verified account" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-513 @HUB-681 @HUB-863 @assignee:caroline.palmer @assignee:juanmoschino @COMPLETED @SANITY @SIGNUP_BASIC
+  Scenario: Sign up with a Basic (free) account - verification email & verified account
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    Then Create your account screen is opened ... skipped in 0.000s
+    When the user signs up with name TEST and surname ACCOUNT ... skipped in 0.000s
+    And a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    And the user selects the country Netherlands ... skipped in 0.000s
+    Then the newsletter checkbox is selected by default ... skipped in 0.000s
+    When the user checks terms checkbox ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then the confirm your email screen is opened showing the email account stored in GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And an activation mail is sent for the account stored in GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    When the activation link is obtained from the email received and it is opened ... skipped in 0.000s
+    Then the message in the login window is Done. Just log in now and start blipping. Enjoy! ... skipped in 0.000s
+    When the user logins using the email from global GENERATED_EMAIL_ALIAS and the password layar123 ... skipped in 0.000s
+    Then the user TEST ACCOUNT is logged in ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Checkbox Terms and Conditions - deselected by default check" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-516 @HUB-678 @assignee:caroline.palmer @assignee:gergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario: Checkbox Terms and Conditions - deselected by default check
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    Then the user is on the screen Create your account ... skipped in 0.000s
+    When the terms & conditions checkbox is displayed ... skipped in 0.000s
+    Then the checkbox is deselected by default ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Error message when checkbox Terms and Conditions is deselected" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-516 @assignee:caroline.palmer @COMPLETED @SIGNUP_BASIC
+  Scenario: Error message when checkbox Terms and Conditions is deselected
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email email@test.bg, password pass1234 and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Netherlands ... skipped in 0.000s
+    And the user deselects the terms & conditions checkbox ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then terms checkbox error message is displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form - Subscribe to email updates checkbox selected by default" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-513 @HUB-517 @HUB-523 @HUB-678 @HUB-713 @assignee:caroline.palmer @assignee:gergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario: Sign up form - Subscribe to email updates checkbox selected by default
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the newsletter subscription checkbox is displayed ... skipped in 0.000s
+    Then the newsletter checkbox is selected by default ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.1 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email domain.com, password pass1234 and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is This does not look like an email address ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.2 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email @2jkhkj.com, password pass1234 and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is This does not look like an email address ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.3 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email mrwrong@gmail.com, password pass1234 and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is This email address is already registered. Log in. ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.4 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email a@gmail.com, password pass12 and reenter password pass12 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is You need at least 8 characters in your password ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.5 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.5 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email right@gmail.com, password pass1234 and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is No message ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.6 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.6 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email a@gmail.com, password pass1234 and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is No message ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.7 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.7 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email empty value, password pass1234 and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is You can't leave this empty ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.8 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.8 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email a@gmail.com, password empty value and reenter password pass1234 ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is You can't leave this empty ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - validate email address and password -- @1.9 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-518 @HUB-678 @assigneegergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario Outline: Sign up form submission - validate email address and password -- @1.9 
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user signs up with name Gergana and surname Ivanova ... skipped in 0.000s
+    When the user types email a@gmail.com, password pass1234 and reenter password empty value ... skipped in 0.000s
+    And the user selects the country Andorra ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    Then the response received is You can't leave this empty ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form - Display terms &amp; conditions" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-678 @HUB-679 @assignee:caroline.palmer @assignee:gergana.ivanova @COMPLETED @SIGNUP_BASIC
+  Scenario: Sign up form - Display terms & conditions
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When they click on the terms & conditions link ... skipped in 0.000s
+    When I switch to next tab ... skipped in 0.000s
+    Then the terms & conditions are opened in a new browser tab ... skipped in 0.000s
+    And a button with text Download as PDF is displayed ... skipped in 0.000s
+    Then Download as PDF button is clicked ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form - Display privacy policy" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-678 @HUB-679 @assignee:caroline.palmer @assignee:gergana.ivanova @COMPLETED
+  Scenario: Sign up form - Display privacy policy
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    When the user clicks on a link with the text 'Privacy policy' and a proper modal text is shown ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form - fields and checkboxes check" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-513 @assignee:caroline.palmer @COMPLETED @SIGNUP_BASIC
+  Scenario: Sign up form - fields and checkboxes check
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    Then the following fields are shown on the screen ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - verification email &amp; invalid verification link" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-536 @HUB-692 @assignee:caroline.palmer @assignee:juanmoschino @version:next-version @COMPLETED @SIGNUP_BASIC
+  Scenario: Sign up form submission - verification email & invalid verification link
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    Then Create your account screen is opened ... skipped in 0.000s
+    When the user signs up with name TEST and surname ACCOUNT ... skipped in 0.000s
+    And a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    And the user selects the country Netherlands ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then the confirm your email screen is opened showing the email account stored in GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And an activation mail is sent for the account stored in GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    When the activation link is obtained from the email, the token is modified and the link is opened ... skipped in 0.000s
+    Then the message in the login window is Your link has expired, log in to get a new one. ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="20-basic-account-sign-up.Basic account sign up" name="Sign up form submission - verification email, re-send email" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-525 @HUB-530 @HUB-980 @assignee:caroline.palmer @assignee:juanmoschino @assignee:shyukri.shyukriev @COMPLETED @SIGNUP_BASIC
+  Scenario: Sign up form submission - verification email, re-send email
+    Given The testing account does not contain any emails ... skipped in 0.000s
+    Given the user has chosen a 'free' account ... skipped in 0.000s
+    Then Create your account screen is opened ... skipped in 0.000s
+    When the user signs up with name TEST and surname ACCOUNT ... skipped in 0.000s
+    And a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And the user types the email from global GENERATED_EMAIL_ALIAS in email field and sets the password layar123 ... skipped in 0.000s
+    And the user selects the country Netherlands ... skipped in 0.000s
+    And the user checks terms checkbox ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then the confirm your email screen is opened showing the email account stored in GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And an activation mail is sent for the account stored in GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    When the user clicks in RESEND EMAIL button ... skipped in 0.000s
+    Then an activation mail is sent for the account stored in GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    When the activation link is obtained from the email received and it is opened ... skipped in 0.000s
+    Then the message in the login window is Done. Just log in now and start blipping. Enjoy! ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

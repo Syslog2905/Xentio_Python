@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="16-zendesk-help.Zendesk Help" skipped="3" tests="3" time="0.0"><testcase classname="16-zendesk-help.Zendesk Help" name="Open Help with user logged in HUB (HUB-494) and chek user ID is available (HUB-497) + logout" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-494 @HUB-497 @HUB-558 @assignee:caroline.palmer @COMPLETED
+  Scenario: Open Help with user logged in HUB (HUB-494) and chek user ID is available (HUB-497) + logout
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+    When I open Help from user menu ... skipped in 0.000s
+    And I switch to next tab ... skipped in 0.000s
+    Then the page title must be Help ... skipped in 0.000s
+    When click in link with text Browse tutorials ... skipped in 0.000s
+    Then the page title must be Tutorials – Help ... skipped in 0.000s
+    When back to the previous page ... skipped in 0.000s
+    When click in link with text Get inspired ... skipped in 0.000s
+    Then the page title must be Inspiration – Help ... skipped in 0.000s
+    Then The user blippar.admin is logged in Zendesk ... skipped in 0.000s
+    When I logout from Zendesk ... skipped in 0.000s
+    Then the user is logged out ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="16-zendesk-help.Zendesk Help" name="Open Help with user not logged in HUB (HUB-495)" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-495 @assignee:caroline.palmer @COMPLETED
+  Scenario: Open Help with user not logged in HUB (HUB-495)
+    When I open https://support.blippar.com/hc/en-us and login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the page title must be Help ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="16-zendesk-help.Zendesk Help" name="Verify redirection to correct page after login (HUB-496)" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-496 @assignee:caroline.palmer @COMPLETED
+  Scenario: Verify redirection to correct page after login (HUB-496)
+    When I open https://support.blippar.com/hc/en-us/articles/207845928-Adding-a-call-to-action-CTA- and login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the page title must be Adding a call to action (CTA) – Help ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

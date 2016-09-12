@@ -1,0 +1,677 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="19-hub-api.Hub API" skipped="38" tests="38" time="0.0"><testcase classname="19-hub-api.Hub API" name="Create and delete a campaign" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @HUB_API
+  Scenario: Create and delete a campaign
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I create the campaign with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the campaign with the name hub_api_campaign is present (API) ... skipped in 0.000s
+    When I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the campaign with the name hub_api_campaign is not present (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Create and delete a blipp" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @HUB_API
+  Scenario: Create and delete a blipp
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I create the campaign with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the blipp hub_api_blipp in the campaign hub_api_campaign is present (API) ... skipped in 0.000s
+    When I delete blipp with the name hub_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the blipp hub_api_blipp in the campaign hub_api_campaign is not present (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Publish and unpublish flow" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @HUB_API
+  Scenario: Publish and unpublish flow
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I create the campaign with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    And I publish blipp with the name hub_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the status of the blipp hub_api_blipp in the campaign hub_api_campaign is LIVE (API) ... skipped in 0.000s
+    When I unpublish blipp with the name hub_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the status of the blipp hub_api_blipp in the campaign hub_api_campaign is NOT_LIVE (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Duplicate published blipp and publish the duplicate" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-36 @assignee:caroline.palmer @COMPLETED @HUB_API
+  Scenario: Duplicate published blipp and publish the duplicate
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I create the campaign with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    And I publish blipp with the name hub_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    When I duplicate blipp hub_api_blipp from campaign hub_api_campaign into blipp copy_hub_api_blipp with marker image birds.jpg (API) ... skipped in 0.000s
+    Then I check that the status of the blipp copy_hub_api_blipp in the campaign hub_api_campaign is NOT_LIVE (API) ... skipped in 0.000s
+    When I publish blipp with the name copy_hub_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the status of the blipp copy_hub_api_blipp in the campaign hub_api_campaign is LIVE (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Create custom blipp" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @AUTOMATABLE
+  Scenario: Create custom blipp
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type custom with the name hub_custom_api_blipp zip <zip_name> in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    And I publish blipp with the name hub_custom_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Create 2nd version of an existing custom blipp" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @AUTOMATABLE
+  Scenario: Create 2nd version of an existing custom blipp
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type custom with the name hub_custom_api_blipp zip <zip_name> in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    When I create new version of the custom blipp hub_custom_api_blipp using zip <zip_name> in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check the versions of the blipp hub_custom_api_blipp in the campaign hub_api_campaign are 2 (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Duplicate unpublished blipp and publish the duplicate" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @HUB_API
+  Scenario: Duplicate unpublished blipp and publish the duplicate
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I create the campaign with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    When I duplicate blipp hub_api_blipp from campaign hub_api_campaign into blipp copy_hub_api_blipp with marker image birds.jpg (API) ... skipped in 0.000s
+    Then I check that the status of the blipp copy_hub_api_blipp in the campaign hub_api_campaign is NOT_LIVE (API) ... skipped in 0.000s
+    When I publish blipp with the name copy_hub_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the status of the blipp copy_hub_api_blipp in the campaign hub_api_campaign is LIVE (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Add assets and predefined poll to BlipBuilder blipp" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @BB_API @HUB_API
+  Scenario: Add assets and predefined poll to BlipBuilder blipp
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I create the campaign with the name hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type blipp builder with the name asset_api_blipp, marker image fish1.jpeg in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    And I add asset penguins.jpg to blipp asset_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    And I add asset music.mp3 to blipp asset_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    When I add predefined poll to blipp asset_api_blipp in the campaign hub_api_campaign (API) ... skipped in 0.000s
+    And I get poll data (API) ... skipped in 0.000s
+    Then response should contain Behave Poll,Yes,No,Maybe (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @1.1 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @1.1 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user2 I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_user2 I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @1.2 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @1.2 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As normal_user I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As normal_user I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @1.3 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @1.3 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @1.4 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @1.4 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_user I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @1.5 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @1.5 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As group_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @2.1 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @2.1 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_user I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @2.2 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @2.2 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As normal_user I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As normal_user I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @2.3 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @2.3 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @2.4 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @2.4 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin2 I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As group_admin2 I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @2.5 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @2.5 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As group_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @3.1 Owner - Blippar Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @3.1 Owner - Blippar Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As normal_user I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As normal_user I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @3.2 Owner - Blippar Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @3.2 Owner - Blippar Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @3.3 Owner - Blippar Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @3.3 Owner - Blippar Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_user I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Permissions for campaign rename and deletion with different roles -- @3.4 Owner - Blippar Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Permissions for campaign rename and deletion with different roles -- @3.4 Owner - Blippar Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name altered_campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I rename campaign campaign_permissions into campaign altered_campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As group_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @1.1 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @1.1 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As blippar_user I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I rename blipp hub_api_blipp from campaign campaign_permissions into blipp renamed_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_user I delete blipp with the name renamed_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @1.2 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @1.2 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As blippar_user I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As normal_user I rename blipp hub_api_blipp from campaign campaign_permissions into blipp hub_api_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As normal_user I delete blipp with the name hub_api_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @1.3 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @1.3 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As blippar_user I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I rename blipp hub_api_blipp from campaign campaign_permissions into blipp renamed_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_admin I delete blipp with the name renamed_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @1.4 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @1.4 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As blippar_user I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user2 I rename blipp hub_api_blipp from campaign campaign_permissions into blipp renamed_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_user2 I delete blipp with the name renamed_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @1.5 Owner - Blippar User" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @1.5 Owner - Blippar User
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As blippar_user I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I rename blipp hub_api_blipp from campaign campaign_permissions into blipp hub_api_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+    When As group_admin I delete blipp with the name hub_api_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 403 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @2.1 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @2.1 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As group_admin I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_user I rename blipp hub_api_blipp from campaign campaign_permissions into blipp renamed_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_user I delete blipp with the name renamed_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @2.2 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @2.2 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As blippar_user I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As blippar_admin I rename blipp hub_api_blipp from campaign campaign_permissions into blipp renamed_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As blippar_admin I delete blipp with the name renamed_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Blipp rename and deletion with different roles -- @2.3 Owner - Group Admin" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @PERMISSIONS
+  Scenario Outline: Blipp rename and deletion with different roles -- @2.3 Owner - Group Admin
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As blippar_admin I delete the campaigns with the name campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name campaign_permissions (API) ... skipped in 0.000s
+    And As blippar_admin I create the blipp type blipp builder with the name hub_api_blipp, marker image fish1.jpeg in the campaign campaign_permissions (API) ... skipped in 0.000s
+    When As group_admin I rename blipp hub_api_blipp from campaign campaign_permissions into blipp renamed_blipp (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+    When As group_admin I delete blipp with the name renamed_blipp in the campaign campaign_permissions (API) ... skipped in 0.000s
+    Then I check that response code is 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="CanPublish endpoint -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-613 @assigneejuanmoschino @COMPLETED @CanPublishEndpoint @DISABLED @HUB_API
+  Scenario Outline: CanPublish endpoint -- @1.1 
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As basic_user_no_credit I delete the campaigns with the name quota_b_basic (API) ... skipped in 0.000s
+    And As basic_user_no_credit I create the campaign with the name quota_b_basic (API) ... skipped in 0.000s
+    And As basic_user_no_credit I create and publish 1 blipps in the campaign quota_b_basic (API) ... skipped in 0.000s
+    And As basic_user_no_credit I run canPublish for the blipp with the name last_blipp in campaign quota_b_basic (API) ... skipped in 0.000s
+    Then response should contain true (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="CanPublish endpoint -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-613 @assigneejuanmoschino @COMPLETED @CanPublishEndpoint @DISABLED @HUB_API
+  Scenario Outline: CanPublish endpoint -- @1.2 
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As basic_user_no_credit I delete the campaigns with the name quota_b_basic (API) ... skipped in 0.000s
+    And As basic_user_no_credit I create the campaign with the name quota_b_basic (API) ... skipped in 0.000s
+    And As basic_user_no_credit I create and publish 2 blipps in the campaign quota_b_basic (API) ... skipped in 0.000s
+    And As basic_user_no_credit I run canPublish for the blipp with the name last_blipp in campaign quota_b_basic (API) ... skipped in 0.000s
+    Then response should contain false (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="CanPublish endpoint -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-613 @assigneejuanmoschino @COMPLETED @CanPublishEndpoint @DISABLED @HUB_API
+  Scenario Outline: CanPublish endpoint -- @1.3 
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As pro_user_no_credit I delete the campaigns with the name quota_b_pro (API) ... skipped in 0.000s
+    And As pro_user_no_credit I create the campaign with the name quota_b_pro (API) ... skipped in 0.000s
+    And As pro_user_no_credit I create and publish 9 blipps in the campaign quota_b_pro (API) ... skipped in 0.000s
+    And As pro_user_no_credit I run canPublish for the blipp with the name last_blipp in campaign quota_b_pro (API) ... skipped in 0.000s
+    Then response should contain true (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="CanPublish endpoint -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-613 @assigneejuanmoschino @COMPLETED @CanPublishEndpoint @DISABLED @HUB_API
+  Scenario Outline: CanPublish endpoint -- @1.4 
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When As pro_user_no_credit I delete the campaigns with the name quota_b_pro (API) ... skipped in 0.000s
+    And As pro_user_no_credit I create the campaign with the name quota_b_pro (API) ... skipped in 0.000s
+    And As pro_user_no_credit I create and publish 10 blipps in the campaign quota_b_pro (API) ... skipped in 0.000s
+    And As pro_user_no_credit I run canPublish for the blipp with the name last_blipp in campaign quota_b_pro (API) ... skipped in 0.000s
+    Then response should contain false (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Reco responses when publishing and unpublishing" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @DISABLED @HUB_API @PRODUCTION_EXCLUDED @RECO_CHECK
+  Scenario: Reco responses when publishing and unpublishing
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    Given I delete the campaigns with the name reco_hub_api_campaign (API) ... skipped in 0.000s
+    When I create the campaign with the name reco_hub_api_campaign (API) ... skipped in 0.000s
+    And I create the blipp type blipp builder with the name reco_hub_api_blipp, marker image reco1.jpg in the campaign reco_hub_api_campaign (API) ... skipped in 0.000s
+    And I publish blipp with the name reco_hub_api_blipp in the campaign reco_hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the status of the blipp reco_hub_api_blipp in the campaign reco_hub_api_campaign is LIVE (API) ... skipped in 0.000s
+    When As blippar_admin I run reco endpoint using image reco1.jpg (API) ... skipped in 0.000s
+    Then I check that the reco endpoint returns a response (API) ... skipped in 0.000s
+    And I check that coverimage and plist values matches with the blipp with the name reco_hub_api_blipp in the campaign reco_hub_api_campaign (API) ... skipped in 0.000s
+    When I unpublish blipp with the name reco_hub_api_blipp in the campaign reco_hub_api_campaign (API) ... skipped in 0.000s
+    Then I check that the status of the blipp reco_hub_api_blipp in the campaign reco_hub_api_campaign is NOT_LIVE (API) ... skipped in 0.000s
+    When As blippar_admin I run reco endpoint using image reco1.jpg (API) ... skipped in 0.000s
+    Then I check that the reco endpoint does not return a response (API) ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Check app and dev portal permissions for all blippar roles -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1183 @assigneejuanmoschino @COMPLETED @PERMISSIONS
+  Scenario Outline: Check app and dev portal permissions for all blippar roles -- @1.1 
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I get the user id for user with role blippar_super_admin and I store it in user_id ... skipped in 0.000s
+    And I build the url for endpoint /api/user/{user_id}/permissions?limit=0 using variable in user_id and I store it in endpoint_var ... skipped in 0.000s
+    And As role blippar_super_admin I run a GET using endpoint stored in variable endpoint_var with base in hub_api_url ... skipped in 0.000s
+    Then the response contains the value "app_change_servers","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_qa_features","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_debugging","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_extended_logging","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_sideload_js_blipps","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_sideload_bb_blipps","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "dev_portal_additional_content","Entity":"","Permission":1 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Check app and dev portal permissions for all blippar roles -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1183 @assigneejuanmoschino @COMPLETED @PERMISSIONS
+  Scenario Outline: Check app and dev portal permissions for all blippar roles -- @1.2 
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I get the user id for user with role blippar_admin and I store it in user_id ... skipped in 0.000s
+    And I build the url for endpoint /api/user/{user_id}/permissions?limit=0 using variable in user_id and I store it in endpoint_var ... skipped in 0.000s
+    And As role blippar_admin I run a GET using endpoint stored in variable endpoint_var with base in hub_api_url ... skipped in 0.000s
+    Then the response contains the value "app_change_servers","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_qa_features","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_debugging","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_extended_logging","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_sideload_js_blipps","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_sideload_bb_blipps","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "dev_portal_additional_content","Entity":"","Permission":1 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="19-hub-api.Hub API" name="Check app and dev portal permissions for all blippar roles -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-1183 @assigneejuanmoschino @COMPLETED @PERMISSIONS
+  Scenario Outline: Check app and dev portal permissions for all blippar roles -- @1.3 
+    Given I delete the campaigns with the name hub_api_campaign (API) ... skipped in 0.000s
+    When I get the user id for user with role blippar_user and I store it in user_id ... skipped in 0.000s
+    And I build the url for endpoint /api/user/{user_id}/permissions?limit=0 using variable in user_id and I store it in endpoint_var ... skipped in 0.000s
+    And As role blippar_user I run a GET using endpoint stored in variable endpoint_var with base in hub_api_url ... skipped in 0.000s
+    Then the response contains the value "app_change_servers","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_qa_features","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_debugging","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_extended_logging","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_sideload_js_blipps","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "app_sideload_bb_blipps","Entity":"","Permission":1 ... skipped in 0.000s
+    And the response contains the value "dev_portal_additional_content","Entity":"","Permission":1 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" skipped="7" tests="7" time="0.0"><testcase classname="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" name="Barcode assigned to custom blipp - UI" status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-430 @assignee:caroline.palmer @COMPLETED @AUTOMATABLE
+  Scenario: Barcode assigned to custom blipp - UI
+    Given that the barcode is assigned to the custom blipp through zip file ... skipped in 0.000s
+    And the zip file is uploaded and the blipp is created on HUB ... skipped in 0.000s
+    When test/publish the blipp ... skipped in 0.000s
+    And navigate to the Blipp detail page ... skipped in 0.000s
+    Then you should be able to see Barcode placeholder images same as how other markers are displayed ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" name="Barcode blipp - UI -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-430 @assigneecaroline.palmer @COMPLETED @BARCODE @SANITY
+  Scenario Outline: Barcode blipp - UI -- @1.1 
+    When I login with user auto.blippar+blippar_user@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar User is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I delete the campaign BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then I check that there are not campaigns cards with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    When I create the campaign with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then The screen BEHAVE BARCODE_CAMPAIGN is opened ... skipped in 0.000s
+    When I click on Create Bespoke blipp button ... skipped in 0.000s
+    Then The modal Create blipp is opened ... skipped in 0.000s
+    And The modal step Name is active ... skipped in 0.000s
+    When Creating my blipp I give it the name BEHAVE BARCODE_BLIPP ... skipped in 0.000s
+    And Creating my blipp I upload the zip barcode.zip ... skipped in 0.000s
+    And I click on next ... skipped in 0.000s
+    Then The modal step Publish is active ... skipped in 0.000s
+    When Creating my blipp I select Make your blipp live: choose countries ... skipped in 0.000s
+    And I choose GB as the country ... skipped in 0.000s
+    And I click on publish blipp ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BARCODE_BLIPP is created ... skipped in 0.000s
+    When I go to Blipp Detail BEHAVE BARCODE_BLIPP page ... skipped in 0.000s
+    Then I can see Barcode numbers ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" name="Barcode blipp - UI -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-430 @assigneecaroline.palmer @COMPLETED @BARCODE @SANITY
+  Scenario Outline: Barcode blipp - UI -- @1.2 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar Admin is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I delete the campaign BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then I check that there are not campaigns cards with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    When I create the campaign with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then The screen BEHAVE BARCODE_CAMPAIGN is opened ... skipped in 0.000s
+    When I click on Create Bespoke blipp button ... skipped in 0.000s
+    Then The modal Create blipp is opened ... skipped in 0.000s
+    And The modal step Name is active ... skipped in 0.000s
+    When Creating my blipp I give it the name BEHAVE BARCODE_BLIPP ... skipped in 0.000s
+    And Creating my blipp I upload the zip barcode.zip ... skipped in 0.000s
+    And I click on next ... skipped in 0.000s
+    Then The modal step Publish is active ... skipped in 0.000s
+    When Creating my blipp I select Make your blipp live: choose countries ... skipped in 0.000s
+    And I choose GB as the country ... skipped in 0.000s
+    And I click on publish blipp ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BARCODE_BLIPP is created ... skipped in 0.000s
+    When I go to Blipp Detail BEHAVE BARCODE_BLIPP page ... skipped in 0.000s
+    Then I can see Barcode numbers ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" name="Metadata json blipp - UI -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @BARCODE
+  Scenario Outline: Metadata json blipp - UI -- @1.1 
+    When I login with user auto.blippar+blippar_user@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar User is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I delete the campaign BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then I check that there are not campaigns cards with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    When I create the campaign with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then The screen BEHAVE BARCODE_CAMPAIGN is opened ... skipped in 0.000s
+    When I click on Create Bespoke blipp button ... skipped in 0.000s
+    Then The modal Create blipp is opened ... skipped in 0.000s
+    And The modal step Name is active ... skipped in 0.000s
+    When Creating my blipp I give it the name BEHAVE BARCODE_BLIPP ... skipped in 0.000s
+    And Creating my blipp I upload the zip metadata.zip ... skipped in 0.000s
+    And I click on next ... skipped in 0.000s
+    Then The modal step Publish is active ... skipped in 0.000s
+    When Creating my blipp I select Make your blipp live: choose countries ... skipped in 0.000s
+    And I choose GB as the country ... skipped in 0.000s
+    And I click on publish blipp ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BARCODE_BLIPP is created ... skipped in 0.000s
+    When I go to Blipp Detail BEHAVE BARCODE_BLIPP page ... skipped in 0.000s
+    Then I can see Barcode numbers ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" name="Metadata json blipp - UI -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @BARCODE
+  Scenario Outline: Metadata json blipp - UI -- @1.2 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar Admin is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I delete the campaign BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then I check that there are not campaigns cards with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    When I create the campaign with the name BEHAVE BARCODE_CAMPAIGN ... skipped in 0.000s
+    Then The screen BEHAVE BARCODE_CAMPAIGN is opened ... skipped in 0.000s
+    When I click on Create Bespoke blipp button ... skipped in 0.000s
+    Then The modal Create blipp is opened ... skipped in 0.000s
+    And The modal step Name is active ... skipped in 0.000s
+    When Creating my blipp I give it the name BEHAVE BARCODE_BLIPP ... skipped in 0.000s
+    And Creating my blipp I upload the zip metadata.zip ... skipped in 0.000s
+    And I click on next ... skipped in 0.000s
+    Then The modal step Publish is active ... skipped in 0.000s
+    When Creating my blipp I select Make your blipp live: choose countries ... skipped in 0.000s
+    And I choose GB as the country ... skipped in 0.000s
+    And I click on publish blipp ... skipped in 0.000s
+    Then I check that the blipp with the name BEHAVE BARCODE_BLIPP is created ... skipped in 0.000s
+    When I go to Blipp Detail BEHAVE BARCODE_BLIPP page ... skipped in 0.000s
+    Then I can see Barcode numbers ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" name="Duplicate Blippbuilder blipp with many assets (UI) -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @BARCODE @DUPLICATE_BLIPP
+  Scenario Outline: Duplicate Blippbuilder blipp with many assets (UI) -- @1.1 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar Admin is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    Then I check that there is a campaign card with the name 2_ASSETS ... skipped in 0.000s
+    When I open the campaign with the name 2_ASSETS ... skipped in 0.000s
+    Then The screen 2_ASSETS is opened ... skipped in 0.000s
+    Then I check that the blipp with the name 2_ASSETS_BLIPP is there (UI) ... skipped in 0.000s
+    Then I click on More option button on blipp 2_ASSETS_BLIPP (UI) ... skipped in 0.000s
+    And I click on Duplicate button on the blipp (UI) ... skipped in 0.000s
+    Then I write the name as COPY_OF_2_ASSETS_BLIPP (UI) ... skipped in 0.000s
+    When Duplicating my blipp I upload the marker birds.jpg ... skipped in 0.000s
+    Then I check that the status of the blipp 2_ASSETS_BLIPP detail page is Draft (UI) ... skipped in 0.000s
+    When back to the previous page ... skipped in 0.000s
+    Then I check that the blipp with the name COPY_OF_2_ASSETS_BLIPP is there (UI) ... skipped in 0.000s
+    When I delete the blipp COPY_OF_2_ASSETS_BLIPP ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="13-barcode-and-some-duplicate-blipp-tests---ui.Barcode and some duplicate blipp tests - UI" name="Duplicate Blippbuilder blipp with many assets (UI) -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @BARCODE @DUPLICATE_BLIPP
+  Scenario Outline: Duplicate Blippbuilder blipp with many assets (UI) -- @1.2 
+    When I login with user auto.blippar+superadmin@gmail.com and password blippar1 ... skipped in 0.000s
+    Then The user Blippar Super_Admin is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    Then I check that there is a campaign card with the name 2_ASSETS ... skipped in 0.000s
+    When I open the campaign with the name 2_ASSETS ... skipped in 0.000s
+    Then The screen 2_ASSETS is opened ... skipped in 0.000s
+    Then I check that the blipp with the name 2_ASSETS_BLIPP is there (UI) ... skipped in 0.000s
+    Then I click on More option button on blipp 2_ASSETS_BLIPP (UI) ... skipped in 0.000s
+    And I click on Duplicate button on the blipp (UI) ... skipped in 0.000s
+    Then I write the name as COPY_OF_2_ASSETS_BLIPP (UI) ... skipped in 0.000s
+    When Duplicating my blipp I upload the marker birds.jpg ... skipped in 0.000s
+    Then I check that the status of the blipp 2_ASSETS_BLIPP detail page is Draft (UI) ... skipped in 0.000s
+    When back to the previous page ... skipped in 0.000s
+    Then I check that the blipp with the name COPY_OF_2_ASSETS_BLIPP is there (UI) ... skipped in 0.000s
+    When I delete the blipp COPY_OF_2_ASSETS_BLIPP ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

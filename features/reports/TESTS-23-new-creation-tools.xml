@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite errors="0" failures="0" name="23-new-creation-tools.New creation tools" skipped="17" tests="17" time="0.0"><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: new group -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-822 @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: new group -- @1.1 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When All emails are deleted from test account ... skipped in 0.000s
+    And navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I click on the New Group button ... skipped in 0.000s
+    Then the create new group modal is visible ... skipped in 0.000s
+    When filling out the new group form with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox enabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox enabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox enabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is created with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    When I create a new user trying any of the buttons ... skipped in 0.000s
+    Then the create new user modal is visible ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And creating a user with first name GROUP_PERMISSIONS_TEST and last name USER and email from global var GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a user is created with first name GROUP_PERMISSIONS_TEST and last name USER ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+    And the activation link is obtained from the email received and it is opened ... skipped in 0.000s
+    And the user activates the managed account setting password layar123 and confirmation layar123 ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then Account activated screen is opened ... skipped in 0.000s
+    When clicks the 'Get Started' link ... skipped in 0.000s
+    Then the user GROUP_PERMISSIONS_TEST USER is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST_GROUP_PERMISSIONS ... skipped in 0.000s
+    Then the screen CAMPAIGN_TEST_GROUP_PERMISSIONS is opened ... skipped in 0.000s
+    And the options for blipp creations are bb_classic,bb_new,js ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: new group -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-822 @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: new group -- @1.2 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When All emails are deleted from test account ... skipped in 0.000s
+    And navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I click on the New Group button ... skipped in 0.000s
+    Then the create new group modal is visible ... skipped in 0.000s
+    When filling out the new group form with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox enabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox disabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox disabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is created with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    When I create a new user trying any of the buttons ... skipped in 0.000s
+    Then the create new user modal is visible ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And creating a user with first name GROUP_PERMISSIONS_TEST and last name USER and email from global var GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a user is created with first name GROUP_PERMISSIONS_TEST and last name USER ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+    And the activation link is obtained from the email received and it is opened ... skipped in 0.000s
+    And the user activates the managed account setting password layar123 and confirmation layar123 ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then Account activated screen is opened ... skipped in 0.000s
+    When clicks the 'Get Started' link ... skipped in 0.000s
+    Then the user GROUP_PERMISSIONS_TEST USER is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST_GROUP_PERMISSIONS ... skipped in 0.000s
+    Then the screen CAMPAIGN_TEST_GROUP_PERMISSIONS is opened ... skipped in 0.000s
+    And the options for blipp creations are bb_classic ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: new group -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-822 @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: new group -- @1.3 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When All emails are deleted from test account ... skipped in 0.000s
+    And navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I click on the New Group button ... skipped in 0.000s
+    Then the create new group modal is visible ... skipped in 0.000s
+    When filling out the new group form with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox disabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox enabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox disabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is created with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    When I create a new user trying any of the buttons ... skipped in 0.000s
+    Then the create new user modal is visible ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And creating a user with first name GROUP_PERMISSIONS_TEST and last name USER and email from global var GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a user is created with first name GROUP_PERMISSIONS_TEST and last name USER ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+    And the activation link is obtained from the email received and it is opened ... skipped in 0.000s
+    And the user activates the managed account setting password layar123 and confirmation layar123 ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then Account activated screen is opened ... skipped in 0.000s
+    When clicks the 'Get Started' link ... skipped in 0.000s
+    Then the user GROUP_PERMISSIONS_TEST USER is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST_GROUP_PERMISSIONS ... skipped in 0.000s
+    Then the screen CAMPAIGN_TEST_GROUP_PERMISSIONS is opened ... skipped in 0.000s
+    And the options for blipp creations are bb_new ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: new group -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-822 @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: new group -- @1.4 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When All emails are deleted from test account ... skipped in 0.000s
+    And navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I click on the New Group button ... skipped in 0.000s
+    Then the create new group modal is visible ... skipped in 0.000s
+    When filling out the new group form with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox disabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox disabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox enabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is created with the group name BEHAVE TEST GROUP PERMISSIONS ... skipped in 0.000s
+    When I create a new user trying any of the buttons ... skipped in 0.000s
+    Then the create new user modal is visible ... skipped in 0.000s
+    When a new email alias is generated using the base account email.auto.blippar.hub@gmail.com and stored in the global variable GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    And creating a user with first name GROUP_PERMISSIONS_TEST and last name USER and email from global var GENERATED_EMAIL_ALIAS ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a user is created with first name GROUP_PERMISSIONS_TEST and last name USER ... skipped in 0.000s
+    When I logout ... skipped in 0.000s
+    And the activation link is obtained from the email received and it is opened ... skipped in 0.000s
+    And the user activates the managed account setting password layar123 and confirmation layar123 ... skipped in 0.000s
+    And the user submits the form ... skipped in 0.000s
+    Then Account activated screen is opened ... skipped in 0.000s
+    When clicks the 'Get Started' link ... skipped in 0.000s
+    Then the user GROUP_PERMISSIONS_TEST USER is logged in ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST_GROUP_PERMISSIONS ... skipped in 0.000s
+    Then the screen CAMPAIGN_TEST_GROUP_PERMISSIONS is opened ... skipped in 0.000s
+    And the options for blipp creations are js ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: update group settings -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @AUTOMATABLE @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: update group settings -- @1.1 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I open the group TEST_UPDATE_GROUP_NEW_TOOLS for edition ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox enabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox enabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox enabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is updated ... skipped in 0.000s
+    When I login with user testit14@abv.bg and password gerg456ivan ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST ... skipped in 0.000s
+    Then the options for blipp creations are bb_classic,bb_new,js ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: update group settings -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @AUTOMATABLE @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: update group settings -- @1.2 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I open the group TEST_UPDATE_GROUP_NEW_TOOLS for edition ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox enabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox disabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox disabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is updated ... skipped in 0.000s
+    When I login with user testit14@abv.bg and password gerg456ivan ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST ... skipped in 0.000s
+    Then the options for blipp creations are Create a blipp ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: update group settings -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @AUTOMATABLE @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: update group settings -- @1.3 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I open the group TEST_UPDATE_GROUP_NEW_TOOLS for edition ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox disabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox enabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox disabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is updated ... skipped in 0.000s
+    When I login with user testit14@abv.bg and password gerg456ivan ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST ... skipped in 0.000s
+    Then the options for blipp creations are Create a blipp ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Set group permissions: update group settings -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-869 @assigneegergana.ivanova @versiontool-chooser @COMPLETED @AUTOMATABLE @GROUPS_AND_USERS
+  Scenario Outline: Set group permissions: update group settings -- @1.4 
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I open the group TEST_UPDATE_GROUP_NEW_TOOLS for edition ... skipped in 0.000s
+    And I set BlippBuilder (Classic) checkbox disabled ... skipped in 0.000s
+    And I set BlippBuilder (New) checkbox disabled ... skipped in 0.000s
+    And I set Custom (JavaScript) checkbox enabled ... skipped in 0.000s
+    Then the submit button is clickable ... skipped in 0.000s
+    When I click on the modal submit button ... skipped in 0.000s
+    Then a group is updated ... skipped in 0.000s
+    When I login with user testit14@abv.bg and password gerg456ivan ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    And I create the campaign with the name CAMPAIGN_TEST ... skipped in 0.000s
+    Then the options for blipp creations are Create a blipp ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Check the tools available depending on user permissions -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-823 @HUB-870 @assigneegergana.ivanova @assigneejuanmoschino @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Check the tools available depending on user permissions -- @1.1 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I select the group TEST_UPDATE_GROUP_NEW_TOOLS ... skipped in 0.000s
+    When I click on the users tab ... skipped in 0.000s
+    When filtering by shyukri.shyukriev ... skipped in 0.000s
+    And I revoke access to all tools for user shyukri ... skipped in 0.000s
+    Then I check that the user has all tools revoked ... skipped in 0.000s
+    When I Add access to BlippBuilder (Classic) on group or user level ... skipped in 0.000s
+    And I Add access to BlippBuilder (New) on group or user level ... skipped in 0.000s
+    And I Add access to Custom (JavaScript) on group or user level ... skipped in 0.000s
+    When I login with user shyukri.shyukriev+new_tools@blippar.com and password layar123 ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    When I open the campaign with the name CAMPAIGN_TO_EDIT ... skipped in 0.000s
+    Then the options for blipp creations are bb_classic,bb_new,js ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Check the tools available depending on user permissions -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-823 @HUB-870 @assigneegergana.ivanova @assigneejuanmoschino @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Check the tools available depending on user permissions -- @1.2 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I select the group TEST_UPDATE_GROUP_NEW_TOOLS ... skipped in 0.000s
+    When I click on the users tab ... skipped in 0.000s
+    When filtering by shyukri.shyukriev ... skipped in 0.000s
+    And I revoke access to all tools for user shyukri ... skipped in 0.000s
+    Then I check that the user has all tools revoked ... skipped in 0.000s
+    When I Revoke access to BlippBuilder (Classic) on group or user level ... skipped in 0.000s
+    And I Revoke access to BlippBuilder (New) on group or user level ... skipped in 0.000s
+    And I Revoke access to Custom (JavaScript) on group or user level ... skipped in 0.000s
+    When I login with user shyukri.shyukriev+new_tools@blippar.com and password layar123 ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    When I open the campaign with the name CAMPAIGN_TO_EDIT ... skipped in 0.000s
+    Then the options for blipp creations are bb_classic ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Check the tools available depending on user permissions -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-823 @HUB-870 @assigneegergana.ivanova @assigneejuanmoschino @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Check the tools available depending on user permissions -- @1.3 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I select the group TEST_UPDATE_GROUP_NEW_TOOLS ... skipped in 0.000s
+    When I click on the users tab ... skipped in 0.000s
+    When filtering by shyukri.shyukriev ... skipped in 0.000s
+    And I revoke access to all tools for user shyukri ... skipped in 0.000s
+    Then I check that the user has all tools revoked ... skipped in 0.000s
+    When I Add access to BlippBuilder (Classic) on group or user level ... skipped in 0.000s
+    And I Revoke access to BlippBuilder (New) on group or user level ... skipped in 0.000s
+    And I Revoke access to Custom (JavaScript) on group or user level ... skipped in 0.000s
+    When I login with user shyukri.shyukriev+new_tools@blippar.com and password layar123 ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    When I open the campaign with the name CAMPAIGN_TO_EDIT ... skipped in 0.000s
+    Then the options for blipp creations are bb_classic ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Check the tools available depending on user permissions -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-823 @HUB-870 @assigneegergana.ivanova @assigneejuanmoschino @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Check the tools available depending on user permissions -- @1.4 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I select the group TEST_UPDATE_GROUP_NEW_TOOLS ... skipped in 0.000s
+    When I click on the users tab ... skipped in 0.000s
+    When filtering by shyukri.shyukriev ... skipped in 0.000s
+    And I revoke access to all tools for user shyukri ... skipped in 0.000s
+    Then I check that the user has all tools revoked ... skipped in 0.000s
+    When I Revoke access to BlippBuilder (Classic) on group or user level ... skipped in 0.000s
+    And I Add access to BlippBuilder (New) on group or user level ... skipped in 0.000s
+    And I Revoke access to Custom (JavaScript) on group or user level ... skipped in 0.000s
+    When I login with user shyukri.shyukriev+new_tools@blippar.com and password layar123 ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    When I open the campaign with the name CAMPAIGN_TO_EDIT ... skipped in 0.000s
+    Then the options for blipp creations are bb_new,bb_classic ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Check the tools available depending on user permissions -- @1.5 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @HUB-823 @HUB-870 @assigneegergana.ivanova @assigneejuanmoschino @versiontool-chooser @COMPLETED @GROUPS_AND_USERS
+  Scenario Outline: Check the tools available depending on user permissions -- @1.5 
+    When I login with user auto.blippar@gmail.com and password blippar1 ... skipped in 0.000s
+    Then the user Blippar Admin is logged in ... skipped in 0.000s
+    When navigating to Groups & Users ... skipped in 0.000s
+    Then the Groups overview is loaded ... skipped in 0.000s
+    When I select the group TEST_UPDATE_GROUP_NEW_TOOLS ... skipped in 0.000s
+    When I click on the users tab ... skipped in 0.000s
+    When filtering by shyukri.shyukriev ... skipped in 0.000s
+    And I revoke access to all tools for user shyukri ... skipped in 0.000s
+    Then I check that the user has all tools revoked ... skipped in 0.000s
+    When I Revoke access to BlippBuilder (Classic) on group or user level ... skipped in 0.000s
+    And I Revoke access to BlippBuilder (New) on group or user level ... skipped in 0.000s
+    And I Add access to Custom (JavaScript) on group or user level ... skipped in 0.000s
+    When I login with user shyukri.shyukriev+new_tools@blippar.com and password layar123 ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    When I open the campaign with the name CAMPAIGN_TO_EDIT ... skipped in 0.000s
+    Then the options for blipp creations are js,bb_classic ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Match user permissions in API with blipp creation options in UI -- @1.1 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @GROUPS_AND_USERS
+  Scenario Outline: Match user permissions in API with blipp creation options in UI -- @1.1 
+    Given I delete the campaigns with the name BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_ADMIN (API) ... skipped in 0.000s
+    When As blippar_admin I create the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_ADMIN (API) ... skipped in 0.000s
+    Given I am logged in as a blippar_admin user ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I open the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_ADMIN ... skipped in 0.000s
+    Then The screen BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_ADMIN is opened ... skipped in 0.000s
+    When I get the permissions for the user that created campaign BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_ADMIN and store them in USER_PERMS (API) ... skipped in 0.000s
+    Then I check that the options for blipp creation are correct according to the permissions in USER_PERMS ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Match user permissions in API with blipp creation options in UI -- @1.2 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @GROUPS_AND_USERS
+  Scenario Outline: Match user permissions in API with blipp creation options in UI -- @1.2 
+    Given I delete the campaigns with the name BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_USER (API) ... skipped in 0.000s
+    When As blippar_user I create the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_USER (API) ... skipped in 0.000s
+    Given I am logged in as a blippar_user user ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I open the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_USER ... skipped in 0.000s
+    Then The screen BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_USER is opened ... skipped in 0.000s
+    When I get the permissions for the user that created campaign BEHAVE_RANDOM_BLIPP_CHECK_BLIPPAR_USER and store them in USER_PERMS (API) ... skipped in 0.000s
+    Then I check that the options for blipp creation are correct according to the permissions in USER_PERMS ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Match user permissions in API with blipp creation options in UI -- @1.3 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @GROUPS_AND_USERS
+  Scenario Outline: Match user permissions in API with blipp creation options in UI -- @1.3 
+    Given I delete the campaigns with the name BEHAVE_RANDOM_BLIPP_CHECK_GROUP_ADMIN (API) ... skipped in 0.000s
+    When As group_admin I create the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_GROUP_ADMIN (API) ... skipped in 0.000s
+    Given I am logged in as a group_admin user ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I open the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_GROUP_ADMIN ... skipped in 0.000s
+    Then The screen BEHAVE_RANDOM_BLIPP_CHECK_GROUP_ADMIN is opened ... skipped in 0.000s
+    When I get the permissions for the user that created campaign BEHAVE_RANDOM_BLIPP_CHECK_GROUP_ADMIN and store them in USER_PERMS (API) ... skipped in 0.000s
+    Then I check that the options for blipp creation are correct according to the permissions in USER_PERMS ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="23-new-creation-tools.New creation tools" name="Match user permissions in API with blipp creation options in UI -- @1.4 " status="skipped" time="0.0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @ORPHAN @GROUPS_AND_USERS
+  Scenario Outline: Match user permissions in API with blipp creation options in UI -- @1.4 
+    Given I delete the campaigns with the name BEHAVE_RANDOM_BLIPP_CHECK_NORMAL_USER (API) ... skipped in 0.000s
+    When As normal_user I create the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_NORMAL_USER (API) ... skipped in 0.000s
+    Given I am logged in as a normal_user user ... skipped in 0.000s
+    When I go to My Campaigns ... skipped in 0.000s
+    Then The screen My campaigns is opened ... skipped in 0.000s
+    When I open the campaign with the name BEHAVE_RANDOM_BLIPP_CHECK_NORMAL_USER ... skipped in 0.000s
+    Then The screen BEHAVE_RANDOM_BLIPP_CHECK_NORMAL_USER is opened ... skipped in 0.000s
+    When I get the permissions for the user that created campaign BEHAVE_RANDOM_BLIPP_CHECK_NORMAL_USER and store them in USER_PERMS (API) ... skipped in 0.000s
+    Then I check that the options for blipp creation are correct according to the permissions in USER_PERMS ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
