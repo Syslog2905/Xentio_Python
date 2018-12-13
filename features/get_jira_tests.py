@@ -2,8 +2,8 @@ import optparse
 import os
 
 BEHAVE_SERVER = "https://behave.pro"
-USER = "amlyYTphNzNkNDNjNC01OTM2LTQzYTItYTUxZS02MTY0OGY5OTcxZTk="
-PASSWORD = "6ce0f5fd7b3c8b9ac277f68a7b058c0c143bc7af"
+USER = "some user"
+PASSWORD = "some pass"
 
 parser = optparse.OptionParser()
 parser.add_option('-p', '--project',
